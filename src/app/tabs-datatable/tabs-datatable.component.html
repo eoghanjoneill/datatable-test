@@ -1,0 +1,75 @@
+<mat-tab-group>
+    <mat-tab label="First">
+        <div>
+            <h3>
+                Force Fill Column Width Distribution
+                <small>
+                    <a href="https://github.com/swimlane/ngx-datatable/blob/master/src/app/columns/column-force.component.ts"
+                        target="_blank">
+                        Source
+                    </a>
+                </small>
+            </h3>
+            <ngx-datatable class="material" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
+                rowHeight="auto" [rows]="rows">
+                <ngx-datatable-column name="Name (width 100)" prop="name" [width]="100">
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        {{ value }}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Gender (width 100)" prop="gender" [width]="100">
+                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                        {{ value }}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Company (width 300)" prop="company" [width]="300">
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        {{ value }}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Age (width 100)" prop="age" [width]="100">
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        {{ value }}
+                    </ng-template>
+                </ngx-datatable-column>
+            </ngx-datatable>
+        </div>
+    </mat-tab>
+    <mat-tab label="Second">
+        <div>
+            <h3>
+                Fixed Column Widths
+                <small>
+                    <a href="https://github.com/swimlane/ngx-datatable/blob/master/src/app/columns/column-standard.component.ts"
+                        target="_blank">
+                        Source
+                    </a>
+                </small>
+            </h3>
+            <ngx-datatable class="material" [columnMode]="'standard'" [headerHeight]="50" [footerHeight]="50"
+                rowHeight="auto" [rows]="rows">
+                <ngx-datatable-column name="Name (width 100)" prop="name" [width]="100">
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        {{ value }}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Gender (width 100)" prop="gender" [width]="100">
+                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                        {{ value }}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Company (width 300)" prop="company" [width]="300">
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        {{ value }}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Age (width 100)" prop="age" [width]="100">
+                    <ng-template let-value="value" ngx-datatable-cell-template>
+                        {{ value }}
+                    </ng-template>
+                </ngx-datatable-column>
+            </ngx-datatable>
+        </div>
+    </mat-tab>
+    <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
