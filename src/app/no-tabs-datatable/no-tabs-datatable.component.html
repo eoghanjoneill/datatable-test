@@ -18,22 +18,22 @@
     rowHeight="auto"
     [rows]="rows"
   >
-    <ngx-datatable-column name="Name" [width]="100">
+    <ngx-datatable-column name="Name (width 100)" prop="name" [width]="100">
       <ng-template let-value="value" ngx-datatable-cell-template>
         {{ value }}
       </ng-template>
     </ngx-datatable-column>
-    <ngx-datatable-column name="Gender" [width]="100">
+    <ngx-datatable-column name="Gender (width 100)" prop="gender" [width]="100">
       <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
         {{ value }}
       </ng-template>
     </ngx-datatable-column>
-    <ngx-datatable-column name="Company" [width]="300">
+    <ngx-datatable-column name="Company (width 300)" prop="company"  [width]="300">
     <ng-template let-value="value" ngx-datatable-cell-template>
       {{ value }}
     </ng-template>
   </ngx-datatable-column>
-    <ngx-datatable-column name="Age" [width]="100">
+    <ngx-datatable-column name="Age (width 100)" prop="age"  [width]="100">
       <ng-template let-value="value" ngx-datatable-cell-template>
         {{ value }}
       </ng-template>
